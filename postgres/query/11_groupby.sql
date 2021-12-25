@@ -1,24 +1,22 @@
 -- http://www.postgresqltutorial.com/postgresql-group-by/
 
--- Example 0
-SELECT
-  unit_price,
-  COUNT(unit_price) AS quantity,
-  SUM(unit_price) AS total
-FROM
-  products
-GROUP BY
-  unit_price
-ORDER BY
-  quantity ASC;
+USE dvdrental;
 
--- Example 1
-SELECT
-  category_id,
-  COUNT(category_id) AS quantity
-FROM
-  products
-GROUP BY
-  category_id
-ORDER BY
-  category_id ASC;
+-- example 01
+SELECT customer_id, SUM(amount) AS total
+FROM payment
+GROUP BY customer_id
+LIMIT 20;
+
+-- example 02
+SELECT customer_id, SUM(amount) AS total
+FROM payment
+GROUP BY customer_id
+ORDER BY total ASC
+LIMIT 20;
+
+-- Using GROUP BY clause with the JOIN clause
+SELECT first_name || '' || last_name full_name, SUM(amount) amount FROM payment
+INNER JOIN customer USING (customer_id)
+GROUP BY full_name
+ORDER BY amount DESC;

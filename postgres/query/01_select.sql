@@ -1,6 +1,6 @@
 -- http://www.postgresqltutorial.com/postgresql-select/
 
-use dvdrental;
+USE dvdrental;
 
 SELECT * FROM actor;
 

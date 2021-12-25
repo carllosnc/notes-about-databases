@@ -1,6 +1,6 @@
 -- http://www.postgresqltutorial.com/postgresql-in/
 
-use dvdrental;
+USE dvdrental;
 
 -- IN operator
 -- You use IN operator in the WHERE clause to check if a value matches any value in a list of values.

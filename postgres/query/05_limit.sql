@@ -1,6 +1,6 @@
 -- http://www.postgresqltutorial.com/postgresql-limit/
 
-use dvdrental;
+USE dvdrental;
 
 -- Using PostgreSQL LIMIT to constrain the number of returned rows example
 

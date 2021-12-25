@@ -1,29 +1,13 @@
 -- http://www.postgresqltutorial.com/postgresql-tutorial/postgresql-except/
 
--- To combine the queries using the EXCEPT operator, you must obey the following rules:
--- (1) The number of columns and their orders must be the same in the two queries.
--- (2) The data types of the respective columns must be compatible.
+USE dvdrentals;
 
--- TABLE 1
----------------
--- Apple
--- Orange
--- Banana
--- Cucumber
+-- Exclude ten first actors
 
--- TABLE 2
----------------
--- Orange
--- Apple
--- Watermelon
--- Pear
+SELECT * FROM actor EXCEPT
+SELECT * FROM actor WHERE actor_id <= 10 ORDER BY actor_id LIMIT 20;
 
-SELECT
-  fruit
-FROM
-  basket_a
-EXCEPT
-SELECT
-  fruit
-FROM
-  basket_b;
+-- Exclude all movie that title starts with "A"
+
+SELECT title FROM film EXCEPT
+SELECT title FROM film WHERE title LIKE 'A%' ORDER BY title ASC;

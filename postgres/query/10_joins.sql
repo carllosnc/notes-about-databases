@@ -27,43 +27,47 @@ INSERT INTO basket_b VALUES
   (3, 'Watermelon'),
   (4, 'Pear');
 
-/* Inner join */
+-- Inner join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   INNER JOIN basket_b
   ON fruit_a = fruit_b;
 
-/* Left join */
+-- Left join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   LEFT JOIN basket_b
   ON fruit_a = fruit_b;
 
-/* Left outer join */
+-- Left outer join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   LEFT OUTER JOIN basket_b
   ON fruit_a = fruit_b
   WHERE b IS NULL;
 
-/* Right join */
+-- Right join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   RIGHT JOIN basket_b
   ON fruit_a = fruit_b;
 
-/* Right outer join */
+-- Right outer join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   RIGHT JOIN basket_b
   ON fruit_a = fruit_b
   WHERE a IS NULL;
 
-/* Full join */
+-- Full join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   FULL JOIN basket_b
   ON fruit_a = fruit_b;
 
-/* Full outer join */
+-- Full outer join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   FULL JOIN basket_b
   ON fruit_a = fruit_b
   WHERE a IS NULL OR b IS NULL; 
+
+-- Cross join
+SELECT a, fruit_a, b, fruit_b FROM basket_a
+  CROSS JOIN basket_b;
 
 -- ==========================================
 
