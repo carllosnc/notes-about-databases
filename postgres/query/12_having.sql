@@ -1,20 +1,17 @@
 -- http://www.postgresqltutorial.com/postgresql-having/
 
--- The HAVING clause sets the condition for group rows created by the GROUP BY
--- clause after the GROUP BY clause applies while the WHERE clause sets
--- the condition for individual rows before GROUP BY clause applies.
--- This is the main difference between the HAVINGand WHEREclauses.
+-- The WHERE clause is applied to rows while the HAVING clause is applied to groups of rows
 
--- example 0
-SELECT
-  unit_price,
-  COUNT(unit_price) AS quantity,
-  SUM(unit_price) AS total
-FROM
-  products
-GROUP BY
-  unit_price
-HAVING
-  COUNT(unit_price) > 1
-ORDER BY
-  total ASC;
+USE dvdrental;
+
+SELECT customer_id, SUM(amount)
+FROM payment
+GROUP BY customer_id
+HAVING SUM(amount) > 200;
+
+-- Having clause with COUNT example
+
+SELECT store_id, COUNT(customer_id)
+FROM customer
+GROUP BY store_id
+HAVING COUNT(customer_id) > 300;
