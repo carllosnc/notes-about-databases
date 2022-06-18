@@ -17,6 +17,7 @@
 ### Resources
 
 [Awasome postgreSQL](https://github.com/dhamaniasad/awesome-postgres)
+[Learn SQL - POPsql](https://popsql.com/learn-sql/postgresql)
 
 ### Articles
 
@@ -30,6 +31,7 @@ Postgres
   \l - list databases
   \list - list databases
   \dt - list tables
+  \i file.sql - run sql file
 ```
 
 Create new role

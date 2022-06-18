@@ -18,7 +18,7 @@ CREATE TABLE cars(
   model VARCHAR(255) NOT NULL,
   year INT NOT NULL DEFAULT date_part('year', now()),
 
-  -- constraint to just one car
+  -- constraint to add just one car
   user_id INT UNIQUE,
 
   -- foreigh

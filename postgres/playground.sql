@@ -2,6 +2,12 @@
 
 USE dvdrental;
 
-SELECT COUNT(title) AS a_letter FROM film WHERE title LIKE 'A%'
-UNION
-SELECT COUNT(title) AS b_letter FROM film WHERE title LIKE 'B%';
+SELECT
+  CONCAT(first_name, '--', COUNT(*))
+FROM
+  actor
+GROUP BY
+ first_name
+HAVING
+  COUNT(*) > 1
+ORDER BY COUNT(*) DESC;

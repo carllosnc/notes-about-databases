@@ -18,6 +18,8 @@ CREATE TABLE departament(
   address TEXT NOT NULL
 );
 
+-- pivot table
+
 CREATE TABLE departament_users(
   user_id INT NOT NULL,
   departament_id INT NOT NULL,
