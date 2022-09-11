@@ -1,9 +1,9 @@
 -- Point type
 
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -23,8 +23,3 @@ INSERT INTO location (geopoint) VALUES
   ('28.125283, 98.024357');
 
 SELECT * FROM location;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

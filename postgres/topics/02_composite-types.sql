@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -28,8 +28,3 @@ SELECT * FROM products;
 SELECT (item).product_name FROM products;
 SELECT (item).description FROM products;
 SELECT (item).price FROM products;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

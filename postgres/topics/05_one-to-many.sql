@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -43,8 +43,3 @@ INSERT INTO posts(title, content, user_id) VALUES
 
 SELECT * FROM users;
 SELECT * FROM posts;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

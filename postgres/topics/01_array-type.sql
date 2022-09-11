@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -24,8 +24,3 @@ SELECT * FROM accounts;
 SELECT phones[1] FROM accounts;
 SELECT phones[2] FROM accounts;
 SELECT phones[3] FROM accounts;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

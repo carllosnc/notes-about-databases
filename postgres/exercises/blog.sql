@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS exercise;
-CREATE DATABASE exercise;
-USE exercise;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -108,8 +108,3 @@ SELECT * FROM posts WHERE user_id = (SELECT id FROM users WHERE name = 'Ricardo'
 SELECT * FROM comments;
 
 SELECT * FROM category_post;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE exercise;

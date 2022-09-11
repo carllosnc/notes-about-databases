@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -53,8 +53,3 @@ SELECT * FROM comments;
 SELECT * FROM users
   INNER JOIN posts ON users.id = posts.user_id
   INNER JOIN comments ON posts.id = comments.post_id;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

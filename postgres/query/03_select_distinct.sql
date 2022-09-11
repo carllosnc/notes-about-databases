@@ -1,9 +1,9 @@
 -- http://www.postgresqltutorial.com/postgresql-select-distinct/
 
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -47,4 +47,4 @@ ORDER BY bcolor, fcolor;
 -- ==========================================
 
 USE postgres;
-DROP DATABASE mytest;
+DROP DATABASE learn_pg;

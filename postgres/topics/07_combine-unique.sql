@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -25,8 +25,3 @@ INSERT INTO car(name, color, year) VALUES
   -- ('Golf', 'red', 2004), // error
 
 SELECT * FROM car;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

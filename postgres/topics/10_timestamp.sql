@@ -1,9 +1,9 @@
 -- Timestamp
 
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -22,8 +22,3 @@ INSERT INTO users(name, email, created_at) VALUES
   ('Genesis', 'Kayden_Bernier@hotmail.com', now());
 
 SELECT * FROM users;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;

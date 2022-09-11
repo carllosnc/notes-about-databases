@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -72,4 +72,4 @@ SELECT a, fruit_a, b, fruit_b FROM basket_a
 -- ==========================================
 
 USE postgres;
-DROP DATABASE mytest;
+DROP DATABASE learn_pg;

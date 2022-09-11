@@ -1,7 +1,7 @@
 USE postgres;
-DROP DATABASE IF EXISTS mytest;
-CREATE DATABASE mytest;
-USE mytest;
+DROP DATABASE IF EXISTS learn_pg;
+CREATE DATABASE learn_pg;
+USE learn_pg;
 
 -- ==========================================
 
@@ -19,8 +19,3 @@ INSERT INTO orders(info) VALUES
 
 SELECT * FROM orders;
 SELECT info -> 'customer' AS customer FROM orders;
-
--- ==========================================
-
-USE postgres;
-DROP DATABASE mytest;
