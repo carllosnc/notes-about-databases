@@ -12,7 +12,8 @@ FROM
   film
 ORDER BY
   title
-FETCH FIRST ROW ONLY;
+FETCH FIRST ROW
+ONLY;
 
 -- It is equivalent to the following query:
 SELECT
