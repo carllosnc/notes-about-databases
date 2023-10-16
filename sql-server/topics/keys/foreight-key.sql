@@ -1,6 +1,5 @@
 USE [learn];
 
---create users table
 CREATE TABLE [dbo].[users]
 (
   [id] INT IDENTITY(1,1) NOT NULL,
@@ -12,7 +11,6 @@ CREATE TABLE [dbo].[users]
   PRIMARY KEY ([id])
 );
 
---create car table that references users table
 CREATE TABLE [dbo].[cars]
 (
   [id] INT IDENTITY(1,1) NOT NULL,
@@ -30,7 +28,6 @@ CREATE TABLE [dbo].[cars]
   REFERENCES [dbo].[users] ([id])
 );
 
---insert some users
 INSERT INTO [dbo].[users]
   ([name], [age], [password], [created_at], [updated_at])
 VALUES
@@ -59,7 +56,6 @@ VALUES
   ('Alexander Carlson', 12, '161211', GETDATE(), GETDATE()),
   ('Cordelia Byrd', 45, '9898', GETDATE(), GETDATE());
 
---insert some cars
 INSERT INTO [dbo].[cars]
   ([make], [model], [year], [price], [mileage], [created_at], [updated_at], [user_id])
 VALUES
@@ -82,7 +78,6 @@ VALUES
   ('Toyota', 'Camry', 2015, 16000, 40000, GETDATE(), GETDATE(), 17),
   ('Toyota', 'Prius', 2016, 20000, 30000, GETDATE(), GETDATE(), 18);
 
---select all cars from users with age > 30
 SELECT *
 FROM [dbo].[cars]
 WHERE [user_id] IN (
@@ -91,6 +86,5 @@ FROM [dbo].[users]
 WHERE [age] > 30
 );
 
---delete all tables
 DROP TABLE [dbo].[cars];
 DROP TABLE [dbo].[users];

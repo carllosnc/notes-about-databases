@@ -1,9 +1,8 @@
 USE [learn];
 
---cars table
 CREATE TABLE [dbo].[cars]
 (
-  [id] INT IDENTITY(1,1) NOT NULL,
+  [id] INT IDENTITY(10,5) NOT NULL,
   [make] VARCHAR(255) NOT NULL,
   [model] VARCHAR(255) NOT NULL,
   [year] INT NOT NULL,
@@ -14,7 +13,6 @@ CREATE TABLE [dbo].[cars]
   PRIMARY KEY ([id])
 );
 
--- insert some cars
 INSERT INTO [dbo].[cars]
   ([make], [model], [year], [price], [mileage], [created_at], [updated_at])
 VALUES
