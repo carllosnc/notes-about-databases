@@ -1,13 +1,3 @@
--- Explore some queries
-
+-- first 10 rows of actos table
 USE dvdrental;
-
-SELECT
-  CONCAT(first_name, '--', COUNT(*))
-FROM
-  actor
-GROUP BY
- first_name
-HAVING
-  COUNT(*) > 1
-ORDER BY COUNT(*) DESC;
+SELECT * FROM actor LIMIT 20 OFFSET 10;
