@@ -1,7 +1,5 @@
 -- http://www.postgresqltutorial.com/postgresql-group-by/
 
-USE dvdrental;
-
 -- example 01
 SELECT customer_id, SUM(amount) AS total
 FROM payment

@@ -1,12 +1,5 @@
 -- http://www.postgresqltutorial.com/postgresql-select-distinct/
 
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE distinct_demo(
 	id SERIAL PRIMARY KEY NOT NULL,
 	bcolor VARCHAR(255),
@@ -30,7 +23,7 @@ INSERT INTO distinct_demo (bcolor, fcolor) VALUES
 SELECT id, bcolor, fcolor FROM distinct_demo;
 
 -- distinct one column
-SELECT DISTINCT bcolor 
+SELECT DISTINCT bcolor
 FROM distinct_demo
 ORDER BY bcolor;
 
@@ -46,5 +39,4 @@ ORDER BY bcolor, fcolor;
 
 -- ==========================================
 
-USE postgres;
-DROP DATABASE learn_pg;
+DROP TABLE distinct_demo;

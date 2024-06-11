@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -55,3 +48,7 @@ INSERT INTO departament_users(user_id, departament_id) VALUES
 SELECT * FROM users;
 SELECT * FROM departament;
 SELECT * FROM departament_users;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS users, departament, departament_users;

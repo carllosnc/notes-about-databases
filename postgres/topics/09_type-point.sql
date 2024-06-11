@@ -1,12 +1,3 @@
--- Point type
-
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE location(
   id SERIAL PRIMARY KEY NOT NULL,
   geopoint POINT
@@ -23,3 +14,7 @@ INSERT INTO location (geopoint) VALUES
   ('28.125283, 98.024357');
 
 SELECT * FROM location;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS location;

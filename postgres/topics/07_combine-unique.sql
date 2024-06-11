@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TYPE COLORS AS ENUM ('red', 'green', 'blue');
 
 CREATE TABLE car(
@@ -25,3 +18,7 @@ INSERT INTO car(name, color, year) VALUES
   -- ('Golf', 'red', 2004), // error
 
 SELECT * FROM car;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS car;

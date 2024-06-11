@@ -1,12 +1,3 @@
--- Timestamp
-
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -22,3 +13,7 @@ INSERT INTO users(name, email, created_at) VALUES
   ('Genesis', 'Kayden_Bernier@hotmail.com', now());
 
 SELECT * FROM users;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS users;

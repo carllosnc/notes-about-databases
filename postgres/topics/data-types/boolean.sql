@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- create table
-
 CREATE TABLE ticket_sales (
   id SERIAL PRIMARY KEY,
   available BOOLEAN NOT NULL
@@ -29,3 +22,5 @@ INSERT INTO ticket_sales (available) VALUES
 -- SELECT
 
 SELECT * FROM ticket_sales;
+
+DROP TABLE ticket_sales;

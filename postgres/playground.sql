@@ -1,3 +1,3 @@
--- first 10 rows of actos table
-USE dvdrental;
-SELECT * FROM actor LIMIT 20 OFFSET 10;
+SELECT rental_date, inventory_id, customer_id
+FROM rental
+WHERE customer_id = (SELECT customer_id FROM customer WHERE first_name = 'Tom');

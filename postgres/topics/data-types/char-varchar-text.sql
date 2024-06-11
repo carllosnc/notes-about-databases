@@ -1,9 +1,4 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- create
+DROP TABLE IF EXISTS char_types;
 
 CREATE TABLE char_types (
   id SERIAL PRIMARY KEY,
@@ -34,4 +29,4 @@ INSERT INTO char_types(a, b, c) VALUES
 
 -- select
 
-SELECT * FROM char_types;
+SELECT COUNT (*) FROM char_types;

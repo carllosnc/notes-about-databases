@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE users(
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255) NOT NULL,
@@ -38,3 +31,7 @@ DELETE FROM users WHERE name = 'Anderson';
 
 SELECT * FROM users;
 SELECT * FROM cars;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS users, cars;

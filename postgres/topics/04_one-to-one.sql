@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 DROP TABLE IF EXISTS users, cars;
 
 CREATE TABLE users(
@@ -37,3 +30,7 @@ INSERT INTO cars(model, year, user_id) VALUES
 
 SELECT * FROM users;
 SELECT * FROM cars;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS users, cars;

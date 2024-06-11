@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -43,3 +36,7 @@ INSERT INTO posts(title, content, user_id) VALUES
 
 SELECT * FROM users;
 SELECT * FROM posts;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS users, posts;

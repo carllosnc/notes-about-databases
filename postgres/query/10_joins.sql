@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 CREATE TABLE basket_a(
   a INT PRIMARY KEY,
   fruit_a VARCHAR(100) NOT NULL
@@ -63,7 +56,7 @@ SELECT a, fruit_a, b, fruit_b FROM basket_a
 SELECT a, fruit_a, b, fruit_b FROM basket_a
   FULL JOIN basket_b
   ON fruit_a = fruit_b
-  WHERE a IS NULL OR b IS NULL; 
+  WHERE a IS NULL OR b IS NULL;
 
 -- Cross join
 SELECT a, fruit_a, b, fruit_b FROM basket_a
@@ -71,5 +64,5 @@ SELECT a, fruit_a, b, fruit_b FROM basket_a
 
 -- ==========================================
 
-USE postgres;
-DROP DATABASE learn_pg;
+DROP TABLE basket_a;
+DROP TABLE basket_b;

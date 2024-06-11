@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
 DROP TABLE IF EXISTS orders;
 
 CREATE TABLE orders(
@@ -19,3 +12,7 @@ INSERT INTO orders(info) VALUES
 
 SELECT * FROM orders;
 SELECT info -> 'customer' AS customer FROM orders;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS orders;

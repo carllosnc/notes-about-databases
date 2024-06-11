@@ -1,9 +1,6 @@
 -- http://www.postgresqltutorial.com/postgresql-limit/
 
-USE dvdrental;
-
 -- Using PostgreSQL LIMIT to constrain the number of returned rows example
-
 SELECT
   film_id,
   title,
@@ -15,7 +12,6 @@ ORDER BY
 LIMIT 5;
 
 --Using OFFSET
-
 SELECT
   film_id,
   title,

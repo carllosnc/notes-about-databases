@@ -7,9 +7,7 @@
 -- 'foo' LIKE 'foo' > true
 -- 'foo' LIKE 'f%' > true
 -- 'foo' LIKE '_o_' > true
--- 'bar' LIKE 'b_' > false 
-
-USE dvdrental;
+-- 'bar' LIKE 'b_' > false
 
 -- Basic example
 

@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- create tables =============================
-
 CREATE TABLE empregados (
   matricula VARCHAR(255) NOT NULL UNIQUE PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,
@@ -54,4 +47,4 @@ ADD CONSTRAINT fk_dependentes_empregados FOREIGN KEY(matricula) REFERENCES empre
 
 -- =============================
 
--- Creating table and add foreign keys
+DROP TABLE IF EXISTS empregados, departamentos, projetos, dependentes;

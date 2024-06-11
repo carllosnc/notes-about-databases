@@ -1,9 +1,6 @@
 -- http://www.postgresqltutorial.com/postgresql-fetch/
 
 -- retrieve a portion of rows returned by a query.
-
-USE dvdrental;
-
 -- The following query use the FETCH clause to select the first film sorted by titles in ascending order:
 SELECT
   film_id,

@@ -1,7 +1,5 @@
 -- http://www.postgresqltutorial.com/postgresql-where/
 
-USE dvdrental;
-
 -- Using WHERE clause with the equal (=) operator example
 SELECT first_name, last_name
 FROM customer

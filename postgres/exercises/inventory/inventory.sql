@@ -1,10 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- create tables
-
 CREATE TABLE salesmen(
   salesman_id SERIAL PRIMARY KEY,
   name VARCHAR(30) NOT NULL,
@@ -57,3 +50,7 @@ INSERT INTO salesmen(name, city, comission) VALUES
 --- select
 
 SELECT salesman_id FROM salesmen;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS salesmen, customers, orders;

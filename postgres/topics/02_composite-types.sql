@@ -1,13 +1,3 @@
-USE postgres;
-DROP DATABASE IF EXISTS learn_pg;
-CREATE DATABASE learn_pg;
-USE learn_pg;
-
--- ==========================================
-
-DROP TABLE IF EXISTS products;
-DROP TYPE IF EXISTS PRODUCT;
-
 CREATE TYPE PRODUCT AS (
   product_name VARCHAR(255),
   description TEXT,
@@ -28,3 +18,8 @@ SELECT * FROM products;
 SELECT (item).product_name FROM products;
 SELECT (item).description FROM products;
 SELECT (item).price FROM products;
+
+-- ==========================================
+
+DROP TABLE IF EXISTS products;
+DROP TYPE IF EXISTS PRODUCT;
