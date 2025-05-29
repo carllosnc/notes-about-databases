@@ -1,7 +1,19 @@
+-- order by asc
 SELECT
-  TrackId,
-  Name
+  title AS "--------- title ---------"
 FROM
-  Tracks
+  albums
 ORDER BY
-  Composer NULLS LAST;
+  title
+ASC
+LIMIT 5;
+
+-- order by desc
+SELECT
+  title AS "--------- title ---------"
+FROM
+  albums
+ORDER BY
+  title
+DESC
+LIMIT 5;

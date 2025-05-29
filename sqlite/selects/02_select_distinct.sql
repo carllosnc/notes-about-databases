@@ -1,7 +1,1 @@
-SELECT DISTINCT
-  city,
-  country
-FROM
-  customers
-ORDER BY
-  country;
+SELECT DISTINCT UnitPrice FROM tracks;
